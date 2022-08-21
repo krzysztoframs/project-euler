@@ -10,10 +10,8 @@ class Number:
 
     @classmethod
     def is_multiplication_of_any_factor(cls, factors: list[int], checked_number: int):
-        if checked_number is None:
-            raise TypeError("The checked_number can't be null")
-        if factors is None:
-            raise TypeError("The factors can't be null")
+        if not factors:
+            raise TypeError("The factors can't be empty")
 
         multiplications: list[int] = []
         for current_factor in factors:

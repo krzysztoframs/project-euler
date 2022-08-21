@@ -45,19 +45,6 @@ class TestNumberIsEven(TestCase):
 
         self.assertFalse(result)
 
-    def test_is_multiplication_of_none_factor(self):
-        factors: list[int] = []
-
-        result: bool = Number.is_multiplication_of_any_factor(factors, 7)
-
-        self.assertFalse(result)
-
-    def test_throws_type_error_when_checked_number_is_none(self):
-        factors: list[int] = [2, 3]
-
-        with self.assertRaises(TypeError):
-            Number.is_multiplication_of_any_factor(factors, None)
-
     def test_throws_type_error_when_factors_list_is_none(self):
         with self.assertRaises(TypeError):
-            Number.is_multiplication_of_any_factor(None, 6)
+            Number.is_multiplication_of_any_factor([], 6)

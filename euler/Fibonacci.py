@@ -40,7 +40,7 @@ class Fibonacci:
         return self.item_index
 
     def get_item(self, item_index: int) -> int:
-        for n in range(0, item_index + 1):
+        for _ in range(0, item_index + 1):
             self.next()
 
         return self.get_current()

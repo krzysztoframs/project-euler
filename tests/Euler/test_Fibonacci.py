@@ -26,7 +26,7 @@ class TestFibonacci(object):
         test_fibonacci: Fibonacci = Fibonacci()
         test_fibonacci.reset()
         result: int = 0
-        for n in range(0, item_index + 1):
+        for _ in range(0, item_index + 1):
             result = test_fibonacci.next()
 
         assert_equal(expected_result, result)
